@@ -2,6 +2,7 @@ import { Badge, Button } from '@heroui/react';
 import bannerimg from '../../public/image/mosla.jpg'
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Banner = () => {
     return (
@@ -11,7 +12,10 @@ const Banner = () => {
                 <h2 className='text-[#7B2024] font-bold text-3xl'>মসলার ঘ্রাণে জমুক স্বাদের উৎসব!</h2>
                 <p className='text-gray-600'>প্রতিদিনের রান্নায় নিয়ে আসুন পরিচিত মসলার স্বাদ। আপনার পছন্দের <br /> মসলা বেছে নিন এক জায়গা থেকেই।</p>
                <div className='flex gap-4'>
-                 <Button className='rounded-xl hover:bg-[#7B2024] hover:text-gray-100 border bg-transparent text-[#7B2024]'>মসলা কিনুন</Button>
+                 <Button className='rounded-xl hover:bg-[#7B2024] hover:text-gray-100 border bg-transparent text-[#7B2024]'> 
+                    <Link href={'/products'}>মসলা কিনুন</Link>
+                    
+                    </Button>
                 <Button className="rounded-xl hover:bg-[#7B2024] hover:text-gray-100 border bg-transparent text-[#7B2024]">আরও জানুন</Button>
                </div>
             </div>

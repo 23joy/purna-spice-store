@@ -1,4 +1,5 @@
 import Banner from "@/Components/Banner";
+import FeaturedProducts from "@/Components/FeaturedProducts";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import OurQuality from "@/Components/OurQuality";
@@ -11,7 +12,7 @@ export default function Home() {
     <div>
       <Navbar></Navbar>
     <Banner></Banner>
-    <ProductCard></ProductCard>
+    <FeaturedProducts></FeaturedProducts>
     <WhyChooseUs></WhyChooseUs>
     <OurQuality></OurQuality>
     <Footer></Footer>
