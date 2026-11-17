@@ -3,7 +3,8 @@ import { getProducts } from '@/lib/data';
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { Suspense } from 'react';
+export const instant=false;
 
 const ProductsPage = async () => {
     const products = await getProducts();
@@ -13,7 +14,9 @@ const ProductsPage = async () => {
                 <h2 className='font-bold text-2xl text-center p-10'>All products</h2>
             </div>
             <div className=''>
+               <Suspense fallback={<p>loading......</p>}>
                 <AddmodalProducts></AddmodalProducts>
+               </Suspense>
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-5'>
                 {

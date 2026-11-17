@@ -31,7 +31,7 @@ const OurQuality = async () => {
                             </div>
                             <div className='w-full grid grid-cols-1 gap-4'>
                                 {
-                                    product.benefits.map(item => <div key={item._id} className=''>
+                                    product.benefits.map((item,index) => <div key={index} className=''>
                                         <Card className='bg-[#E2E8D5]'>
                                             <h2 className='text-[#7B2024]'>{item.title}</h2>
                                             <p className='text-[#65483A]'>{item.description}</p>

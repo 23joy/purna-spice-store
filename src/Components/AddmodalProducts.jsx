@@ -25,21 +25,21 @@ export default function AddmodalProducts() {
         setBenefits(updatedBenefits);
     };
 
-    const handleSubmit =async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget)
         const product = Object.fromEntries(formData.entries())
 
         product.benefits = benefits;
 
-        const res=await fetch("http://localhost:7001/product", {
-            method:'POST',
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/product`, {
+            method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(product)
         })
-        const data=await res.json()
+        const data = await res.json()
         console.log(data)
     };
 

@@ -1,7 +1,7 @@
 
 import ProductsPage from '@/app/products/page';
-import Link from 'next/link';
-import React from 'react';
+import React, { Suspense } from 'react';
+
 
 const ProductCard = async () => {
 
@@ -12,7 +12,11 @@ const ProductCard = async () => {
                 <p className='font-bold text-2xl'>গুঁড়া মসলা</p>
             </div>
 
-            <ProductsPage></ProductsPage>
+            <div>
+                <Suspense fallback={<p>loading......</p>}>
+                    <ProductsPage></ProductsPage>
+                </Suspense>
+            </div>
         </div>
     );
 };

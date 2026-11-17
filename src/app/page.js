@@ -5,6 +5,7 @@ import Navbar from "@/Components/Navbar";
 import OurQuality from "@/Components/OurQuality";
 import ProductCard from "@/Components/ProductCard";
 import WhyChooseUs from "@/Components/WhyChooseUs";
+import { Suspense } from "react";
 
 
 export default function Home() {
@@ -12,9 +13,15 @@ export default function Home() {
     <div>
       <Navbar></Navbar>
     <Banner></Banner>
-    <FeaturedProducts></FeaturedProducts>
-    <WhyChooseUs></WhyChooseUs>
-    <OurQuality></OurQuality>
+    <Suspense>
+      <FeaturedProducts></FeaturedProducts>
+    </Suspense>
+    <Suspense>
+      <WhyChooseUs></WhyChooseUs>
+    </Suspense>
+    <Suspense>
+      <OurQuality></OurQuality>
+    </Suspense>
     <Footer></Footer>
     </div>
   );
