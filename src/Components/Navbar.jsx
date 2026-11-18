@@ -27,6 +27,7 @@ const Navbar = () => {
                     <Link className='hover:underline' href={'/'}>হোম</Link>
                     <Link className='hover:underline' href={'/products'}>পণ্যসমূহ</Link>
                     <Link className='hover:underline' href={'/details'}>আমাদের সম্পর্কে</Link>
+                    <Link className='hover:underline' href={'/mybooking'}>বুকিংসমূহ</Link>
                 </ul>
             </div>
             <div className='flex justify-between gap-3'>

@@ -20,8 +20,8 @@ const OurQuality = async () => {
                      >
                         <div className='flex gap-5'>
                             <div className='w-full grid grid-cols-1 gap-3'>
-                                <Image src={product.Image}
-                                    alt='{product.Image}'
+                                <Image src={product.image}
+                                    alt={product.image}
                                     height={200}
                                     width={200}
                                     className='h-[250px] rounded-2xl object-contain w-full '

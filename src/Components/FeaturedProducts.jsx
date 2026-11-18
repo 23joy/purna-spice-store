@@ -19,8 +19,8 @@ const FeaturedProducts = async () => {
                 {
                     products.map(product => <Card key={product._id} className='w-full min-w-0 p-4 sm:p-6 hover:-translate-y-2 hover:shadow-xl transition-all duration-300'>
                         <div>
-                            <Image src={product.Image}
-                                alt='{product.Image}'
+                            <Image src={product.image}
+                                alt={product.image}
                                 height={200}
                                 width={200}
                                 className='h-[250px] rounded-2xl object-contain w-full '
